@@ -1,0 +1,96 @@
+/* -------------------- *\
+    Global
+\* -------------------- */
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none ;
+    margin: 0;
+    padding: 0;
+}
+/* -------------------- *\
+    Layout
+\* -------------------- */
+.container{
+    display: block;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.container-fluid{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+/* -------------------- *\
+    Utility
+\* -------------------- */
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* -------------------- *\
+    Component
+\* -------------------- */
+.navbar{
+    height: 64px;
+    /* border: 1px solid #000; */
+    padding: 0 16px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.navbar .logo{
+    display: inline-block;
+    vertical-align: center;
+    width: 40px;
+    height: 40px;
+    margin-top:12px ;
+    /* border: 1px solid #000; */
+    background-image: url(../images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.navbar .nav{
+    /* border: 1px solid blue; */
+    float: right;
+}
+.navbar .nav .nav-item{
+    /* border: 1px solid #000; */
+    float: left;
+    margin-left: 32px;
+}
+.navbar .nav .nav-item .nav-link{
+    /* border: 1px solid #000; */
+    display: block;
+    padding: 20px 0;
+    line-height: 24px;
+    color: #4a94ff;
+}
+.navbar .nav .nav-item .nav-link:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translate(-50%,0);
+    height: 4px;
+    background-color: #4a94ff;
+    transition: all 0.2s;
+}
+.navbar .nav .nav-item .nav-link:hover:after{
+    width: 100%;
+}
+
+
