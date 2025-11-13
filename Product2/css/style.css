@@ -1,0 +1,125 @@
+/* -------------------- *\
+    Global
+\* -------------------- */
+
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+h1,p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+html,body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------- *\
+    Image-container
+\* -------------------- */
+
+.image-container{
+    /* border: 1px solid #000; */
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.image-container:before{
+    content: '';
+    display: block;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-top: 75%;
+}
+.image-container .image{
+    /* width: 100%;
+    height: 100%; 
+    改成定位 absolute 來決定寬高*/
+    
+    /* border: 1px solid #000; */
+    background-image: url(../images/hotel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* -------------------- *\
+Product
+\* -------------------- */
+
+.wrapper{
+    height: 100%;
+    background-color: #eee;
+}
+.product{
+    width: 300px;
+    /* border: 1px solid #000; */
+    background-color: #fff;
+    box-shadow: 0px 8px 36px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    transition: box-shadow 0.2s;
+
+    overflow: hidden;
+}
+.product .info{
+    padding: 16px;
+}
+.product .info .name{
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+.product .info .para{
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 18px;
+    text-align: justify;
+    
+}
+.product .info .price{
+    font-size: 16px;
+    text-align: right;
+    color: #ff7878;
+    font-weight: 800;
+}
+.product .tag{
+    background-color: #ff7878;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+/* -------------------- *\
+微互動
+\* -------------------- */
+
+.product:hover{
+    box-shadow: 8px 16px 72px 0px rgba(0, 0, 0, 0.3);
+}
+.product .image-container .image{
+    transition: transform 0.2s;
+}
+.product:hover .image-container .image{
+    /* background-size: 150%; */
+    transform: scale(1.2);
+}

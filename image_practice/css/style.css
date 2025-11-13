@@ -1,0 +1,89 @@
+/* -------------------- *\
+    Global
+\* -------------------- */
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Original */
+
+/* img{
+    height: 300px;
+    width: 300px;
+} */
+
+/* Image tag */
+.image-container{
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.image-container img{
+    width: 100%;
+    /* height: 100%; */
+}
+
+/* Background(cover) */
+
+.bg-image{
+    width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo1{
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 48px;
+    border: 1px solid #000;
+
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+}
+/* Frame */
+.outter{
+    width: 25%;
+    /* border: 5px solid blue; */
+}
+.fm-image-container{
+    width: 100%;
+    /* padding-top: 75%; */
+    border: 1px solid #000;
+}
+.fm-image-container:before{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 75%;
+    /* border: 5px solid green; */
+}
+.fm-image-container .image{
+    /* border: 1px solid red; */
+    background-image: url(../images/potrait.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fm-image-container.ratio-1-1:before{
+padding-top: 100%;
+}
+.fm-image-container.ratio-2-3:before{
+padding-top: 150%;
+}
+.fm-image-container.ratio-16-9:before{
+padding-top: 56.25%;
+}
